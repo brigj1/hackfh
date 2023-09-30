@@ -11,7 +11,7 @@ export const metadata = {
 
 const links = [
   { id: 1, title: 'Home', slug: '/' },
-  { id: 2, title: 'Dashboard', slug: '/dashboard' },
+  { id: 2, title: 'Admin Dashboard', slug: '/admin' },
   { id: 3, title: 'Partner Login', slug: '/partner' },
 ]
 
