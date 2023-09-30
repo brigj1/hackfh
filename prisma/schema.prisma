@@ -14,10 +14,11 @@ generator client {
 model Partner {
   id            Int             @id @default(autoincrement())
   companyName   String
-  email         String          @unique
-  phoneNumber   String
+  contactEmail  String          @unique
   contactName   String
-  address       String?
+  contactPhone  String
+  address1      String?
+  address2      String?
   city          String?
   state         String?
   zip           String?
