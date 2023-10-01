@@ -18,7 +18,7 @@ const links = [
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Nav links={links}/>
         {children}
       </body>
