@@ -28,18 +28,16 @@ model Partner {
 }
 
 model Item {
-  id              Int            @id @default(autoincrement())
-  name            String
-  description     String?
-  images          String?
-  msrp            Float?
-  upc             String?
-  url             String?
-  partner         Partner        @relation(fields: [partnerId], references: [id])
-  partnerId       Int
-  DonationEvent   DonationEvent? @relation(fields: [donationEventId], references: [id])
-  donationEventId Int?
-  DonationItem    DonationItem[]
+  id           Int            @id @unique @default(autoincrement())
+  name         String
+  description  String?
+  images       String?
+  msrp         Float?
+  upc          String?
+  url          String?
+  partner      Partner        @relation(fields: [partnerId], references: [id])
+  partnerId    Int
+  DonationItem DonationItem[]
 }
 
 model DonationEvent {
@@ -50,7 +48,6 @@ model DonationEvent {
   notes        String?
   partner      Partner        @relation(fields: [partnerId], references: [id])
   partnerId    Int
-  items        Item[]
   DonationItem DonationItem[]
 }
 

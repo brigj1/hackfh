@@ -4,7 +4,14 @@ const { PrismaClient } = require('@prisma/client')
 export async function GET(){
   const prisma = new PrismaClient()
   try {
-    const donations = await prisma.donationEvent.findMany()
+    const donations = await prisma.donationEvent.findMany({
+      include: {
+        partner: true,
+        _count: {
+          select: { DonationItem: true }
+        }
+      }
+    })
   
     await prisma.$disconnect()
 
