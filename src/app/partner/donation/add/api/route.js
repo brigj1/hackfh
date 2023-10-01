@@ -6,6 +6,7 @@ export async function POST(request) {
   
   const prisma = new PrismaClient()
   try {
+    // create donation event and create individual donation items
     const donationEvent = await prisma.donationEvent.create({
       data: {...payload}
     })
