@@ -28,8 +28,8 @@ export default async function Page() {
                 <tbody>
                 {donations.map((donation) => (
                   <tr className="border-b dark:border-neutral-500" key={donation.id}>
-                    <td className="whitespace-nowrap px-6 py-4">{donation.partner.companyName}</td>
-                    <td className="whitespace-nowrap px-6 py-4">{donation._count.DonationItem}</td>
+                    <td className="whitespace-nowrap px-6 py-4">{donation.partner?.companyName}</td>
+                    <td className="whitespace-nowrap px-6 py-4">{donation._count?.DonationItem}</td>
                     <td className="whitespace-nowrap px-6 py-4">{donation.status}</td>
                     <td className="whitespace-nowrap px-6 py-4">approve</td>
                     <td className="whitespace-nowrap px-6 py-4">reject</td>
