@@ -6,7 +6,7 @@ export async function POST(request) {
   
   const prisma = new PrismaClient()
   try {
-    const partner = await prisma.partner.create({
+    const item = await prisma.item.create({
       data: {...payload}
     })
   
@@ -17,6 +17,6 @@ export async function POST(request) {
     console.error(e)
     await prisma.$disconnect()
 
-    return { message: 'Failed to add partner' }
+    return { message: 'Failed to add item' }
   }
 }
