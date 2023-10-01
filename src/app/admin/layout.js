@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <section className="flex">
       <AdminSidebar />
-      <div class="p-8 text-center justify-center flex-1" id="content">
+      <div className="p-8 text-center justify-center flex-1" id="content">
         {children}
       </div>
     </section>
