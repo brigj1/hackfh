@@ -1,7 +1,7 @@
 'use client'
 
-import { useForm } from "../../hooks/useForm";
-import { useStyles } from "../../hooks/useStyles";
+import { useForm } from "@/app/hooks/useForm";
+import { useStyles } from "@/app/hooks/useStyles";
 import Table from 'react-bootstrap/Table';
 
 export default function PartnerAdd() {
