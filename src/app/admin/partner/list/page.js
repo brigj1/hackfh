@@ -1,5 +1,5 @@
 async function getPartners() {
-  const res = await fetch(`http://localhost:3000/admin/partner/list/api`)
+  const res = await fetch(`${process.env.VERCEL_URL}/admin/partner/list/api`)
   return res.json()
 }
 
