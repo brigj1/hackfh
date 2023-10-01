@@ -34,7 +34,7 @@ export default function PartnerAdd() {
     };
 
     (async function () {
-      const response = await fetch('${process.env.NEXT_PUBLIC_VERCEL_URL}/admin/partner/add/api', configObj);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/admin/partner/add/api`, configObj);
       const partner = await response.json();
       console.log("addPartner Response", partner)
       return partner;
