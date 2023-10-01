@@ -32,7 +32,7 @@ export function DonationEventAdd() {
     };
 
     (async function () {
-      const response = await fetch(`/partner/donation/add`, configObj);
+      const response = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/partner/donation/add`, configObj);
       const donationEvent = await response.json();
       console.log("addPartner Response", donationEvent)
       return donationEvent;
@@ -96,7 +96,7 @@ export function DonationItemAdd() {
   useEffect(() => {
     async function fetchItems() {
       // fetch('/items');
-      const response = await fetch(`/partner/item/list/api`);
+      const response = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/partner/item/list/api`);
       const fetchedItems = await response.json();
       setItems(fetchedItems);
     }
@@ -132,7 +132,7 @@ export function DonationItemAdd() {
     };
 
     (async function () {
-      const response = await fetch(`/partner/donation/add/api`, configObj);
+      const response = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/partner/donation/add/api`, configObj);
       const donationItem = await response.json();
       console.log("addDonationItem Response", donationItem)
       return donationItem;
