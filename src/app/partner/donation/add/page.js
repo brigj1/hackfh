@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { NumericFormat } from 'react-number-format';
-import { useForm } from "../../hooks/useForm";
-import { useStyles } from "../../hooks/useStyles";
+import { useForm } from "@/app/hooks/useForm";
+import { useStyles } from "@/app/hooks/useStyles";
 import Table from 'react-bootstrap/Table';
 
 export function DonationEventAdd() {
