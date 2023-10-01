@@ -1,7 +1,8 @@
-'use client'
+import { server } from '@/app/config/index';
 
 async function getDonations() {
-  const res = await fetch(`/admin/donation/list/api`)
+  console.log(`${server}/admin/donation/list/api`);
+  const res = await fetch(`${server}/admin/donation/list/api`)
   return res.json()
 }
 

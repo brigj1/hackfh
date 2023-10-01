@@ -1,7 +1,7 @@
-'use client'
+import { server } from '@/app/config/index';
 
 async function getItems() {
-  const res = await fetch(`/partner/item/list/api`)
+  const res = await fetch(`${server}/partner/item/list/api`)
   return res.json()
 }
 

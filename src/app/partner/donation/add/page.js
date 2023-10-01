@@ -1,5 +1,6 @@
 'use client'
 
+import { server } from '@/app/config/index';
 import { useEffect, useState } from 'react';
 import { NumericFormat } from 'react-number-format';
 import { useForm } from "@/app/hooks/useForm";
@@ -32,7 +33,7 @@ export function DonationEventAdd() {
     };
 
     (async function () {
-      const response = await fetch(`/partner/donation/add`, configObj);
+      const response = await fetch(`${server}/partner/donation/add`, configObj);
       const donationEvent = await response.json();
       console.log("addPartner Response", donationEvent)
       return donationEvent;
@@ -96,7 +97,7 @@ export function DonationItemAdd() {
   useEffect(() => {
     async function fetchItems() {
       // fetch('/items');
-      const response = await fetch(`/partner/item/list/api`);
+      const response = await fetch(`${server}/partner/item/list/api`);
       const fetchedItems = await response.json();
       setItems(fetchedItems);
     }
@@ -132,7 +133,7 @@ export function DonationItemAdd() {
     };
 
     (async function () {
-      const response = await fetch(`/partner/donation/add/api`, configObj);
+      const response = await fetch(`${server}/partner/donation/add/api`, configObj);
       const donationItem = await response.json();
       console.log("addDonationItem Response", donationItem)
       return donationItem;

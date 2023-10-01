@@ -1,5 +1,6 @@
 'use client'
 
+import { server } from '@/app/config/index';
 import { NumericFormat } from 'react-number-format';
 import { useForm } from "@/app/hooks/useForm";
 import { useStyles } from "@/app/hooks/useStyles";
@@ -32,7 +33,7 @@ export default function ItemAdd() {
     };
 
     (async function () {
-      const response = await fetch(`/partner/item/add/api`, configObj);
+      const response = await fetch(`${server}/partner/item/add/api`, configObj);
       const item = await response.json();
       console.log("addItem Response", item)
       return item;

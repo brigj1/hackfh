@@ -1,7 +1,7 @@
-'use client'
+import { server } from '@/app/config/index';
 
 async function getPartners() {
-  const res = await fetch(`/admin/partner/list/api`)
+  const res = await fetch(`${server}/admin/partner/list/api`)
   return res.json()
 }
 

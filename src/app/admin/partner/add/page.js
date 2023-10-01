@@ -1,5 +1,6 @@
 'use client'
 
+import { server } from '@/app/config/index';
 import { useForm } from "@/app/hooks/useForm";
 import { useStyles } from "@/app/hooks/useStyles";
 import Table from 'react-bootstrap/Table';
@@ -34,7 +35,7 @@ export default function PartnerAdd() {
     };
 
     (async function () {
-      const response = await fetch(`/admin/partner/add/api`, configObj);
+      const response = await fetch(`${server}/admin/partner/add/api`, configObj);
       const partner = await response.json();
       console.log("addPartner Response", partner)
       return partner;
