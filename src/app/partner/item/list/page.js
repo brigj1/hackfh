@@ -1,5 +1,5 @@
 async function getItems() {
-  const res = await fetch(`http://localhost:3000/partner/item/list/api`)
+  const res = await fetch(`${process.env.VERCEL_URL}/partner/item/list/api`)
   return res.json()
 }
 

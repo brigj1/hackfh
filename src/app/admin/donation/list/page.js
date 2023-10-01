@@ -1,5 +1,5 @@
 async function getDonations() {
-  const res = await fetch(`http://localhost:3000/admin/donation/list/api`)
+  const res = await fetch(`${process.env.VERCEL_URL}/admin/donation/list/api`)
   return res.json()
 }
 
