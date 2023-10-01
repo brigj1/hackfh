@@ -1,5 +1,5 @@
 async function getPartners() {
-  const res = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/admin/partner/list/api`)
+  const res = await fetch(`/admin/partner/list/api`)
   return res.json()
 }
 
