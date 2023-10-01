@@ -26,7 +26,19 @@ export default function PartnerAdd() {
     e.preventDefault();
 
     console.log('formData for addPartner: ', formData);
-    addPartner(formData);
+
+    const configObj = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify( formData )
+    };
+
+    (async function () {
+      const response = await fetch('http://localhost:3000/admin/partner/add/api', configObj);
+      const partner = await response.json();
+      console.log("addPartner Response", partner)
+      return partner;
+    })();
   }
 
   return (
