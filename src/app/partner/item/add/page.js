@@ -32,7 +32,7 @@ export default function ItemAdd() {
     };
 
     (async function () {
-      const response = await fetch('${process.env.VERCEL_URL}/partner/item/add/api', configObj);
+      const response = await fetch('${process.env.NEXT_PUBLIC_VERCEL_URL}/partner/item/add/api', configObj);
       const item = await response.json();
       console.log("addItem Response", item)
       return item;
